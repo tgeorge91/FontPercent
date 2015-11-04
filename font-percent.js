@@ -1,6 +1,6 @@
 /*
 	FontPercent.js
-	Version 1.0.0
+	Version 1.0.1
 	Created by Timothy George (http://www.tgeorge.net)
 	https://github.com/tgeorge91/FontPercent
 	MIT License
@@ -16,13 +16,14 @@ window.fontPercent = (function() {
     });
     
     var fontSize, percent, className;
+    var size = $(window).height();
     
     for (var i = 0; i < classes.length; i++) {
       className = classes[i].className;
       percent = classes[i].size;
       percent = percent.substring(0, percent.indexOf('%'));
       if ($(child).hasClass(className)) {
-        fontSize = (percent / 100) * $(document).height();
+        fontSize = (percent / 100) * size;
         fontSize = fontSize + 'px';
         $(child).css('font-size', fontSize);
       }
@@ -31,7 +32,7 @@ window.fontPercent = (function() {
     percent = $(child).attr('data-fp') || $(child).attr('fp');
     if (percent)  {
       percent = percent.substring(0, percent.indexOf('%'));
-      fontSize = (percent / 100) * $(document).height();
+      fontSize = (percent / 100) * size;
       fontSize = fontSize + 'px';
       $(child).css('font-size', fontSize);
     }  
