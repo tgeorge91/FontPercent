@@ -4,7 +4,9 @@ A simple javascript library for responsive font sizes.
 FontPercent.js is extremely easy to use.
 
 Step 1. Include reference.
+```sh
 	<script src="font-percent.min.js"></script>
+```
 
 Step 2. Set font sizes.
 ```sh
@@ -15,8 +17,11 @@ Step 2. Set font sizes.
 	
 Step 3. Initialize
 ```sh
-	$(document).ready(function(){ fontPercent.init(); });
+	$(document).ready(function(){ 
+		fontPercent.init(); 
+	});
 ```
+
 FontPercent.js also supports classes!
 ```sh
 	<div class="fp-test1">This div is using the addClass function. 6%</div>
